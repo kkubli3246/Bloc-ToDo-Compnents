@@ -10,7 +10,8 @@ class App extends Component {
       todos: [
         { description: 'Walk the cat', isCompleted: true },
         { description: 'Throw the dishes away', isCompleted: false },
-        { description: 'Buy new dishes', isCompleted: false }
+        { description: 'Buy new dishes', isCompleted: false },
+        { description: 'Study on Bloc.io!', isCompleted: true}
       ]
 
 
