@@ -33,6 +33,10 @@ class App extends Component {
    todo.isCompleted = todo.isCompleted ? false : true;
    this.setState({ todos: todos });
   }
+  deleteTodo(){
+
+
+  }
 
 
   render() {
