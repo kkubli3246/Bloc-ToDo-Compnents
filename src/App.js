@@ -33,9 +33,11 @@ class App extends Component {
    todo.isCompleted = todo.isCompleted ? false : true;
    this.setState({ todos: todos });
   }
-  deleteTodo(){
-
-
+  //Assignment To Do Events
+  deleteTodo(index){
+    const newTodo = this.state.todos.filter(i => i.description !== this.state.todos[index].description);
+    this.setState({todos : newTodo});
+    console.log(this.state.todos.indexOf(index));
   }
 
 
@@ -45,7 +47,7 @@ class App extends Component {
         <ul>
           {this.state.todos.map( (todo, index) =>
             <div>
-              <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } toggleComplete={() => this.toggleComplete(index)} />
+              <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } toggleComplete={() => this.toggleComplete(index)} deleteTodo ={() => this.deleteTodo(index)} />
             </div>
           )}
         </ul>
